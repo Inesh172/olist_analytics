@@ -1,0 +1,23 @@
+# dbt generated files
+dbt_packages/
+dbt_internal_packages/
+logs/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Environment variables / credentials
+.env
+.env.*
+profiles.yml
+
+# VS Code
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db

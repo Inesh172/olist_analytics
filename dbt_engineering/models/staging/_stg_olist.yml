@@ -1,0 +1,154 @@
+models:
+  - name: stg_olist__customers
+    columns:
+      - name: order_customer_id
+        description: >
+          Customer record identifier used to join customers to orders.
+          Renamed from raw customer_id column.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: >
+          Idetifier representing each actual customer.
+          Renamed from raw customer_unique_id column.
+        data_tests:
+          - not_null
+
+  - name: stg_olist__geolocation
+    columns:
+      - name: geolocation_lat
+        data_tests:
+          - not_null
+      
+      - name: geolocation_lng
+        data_tests:
+          - not_null
+
+  - name: stg_olist__orders
+    columns:
+      - name: order_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: order_customer_id
+        description: >
+          Key to customers table.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_olist__customers')
+                field: order_customer_id
+
+      - name: order_status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - approved
+                  - canceled
+                  - created
+                  - delivered
+                  - invoiced
+                  - processing
+                  - shipped
+                  - unavailable
+
+  - name: stg_olist__order_items
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_olist__orders')
+                field: order_id
+
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_olist__products')
+                field: product_id
+
+      - name: seller_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_olist__sellers')
+                field: seller_id
+
+      - name: carrier_handover_deadline
+        data_tests:
+          - not_null
+
+      - name: shipping_cost
+        data_tests:
+          - not_null
+
+  - name: stg_olist__order_payments
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_olist__orders')
+                field: order_id
+
+  - name: stg_olist__order_reviews
+    columns:
+      - name: review_id
+        data_tests:
+          - not_null
+
+      - name: satisfaction_score
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4, 5]
+
+      - name: order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_olist__orders')
+                field: order_id
+
+  - name: stg_olist__products
+    columns:
+      - name: product_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: product_category_name_pt
+        description: >
+          Product category name in Brazilian Portuguese.
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_olist__product_category_name')
+                field: product_category_name_pt
+              config: 
+                severity: warn
+
+  - name: stg_olist__product_category_name
+  
+  - name: stg_olist__sellers
+    columns:
+      - name: seller_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: seller_zip_code_prefix
+        data_tests:
+          - not_null

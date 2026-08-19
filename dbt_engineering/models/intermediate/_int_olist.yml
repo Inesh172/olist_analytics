@@ -1,0 +1,120 @@
+version: 2
+
+models:
+  - name: int_olist__orders_enriched
+    columns:
+      - name: order_id
+        data_tests:
+          - unique
+          - not_null
+    
+      - name: actual_delivery_days
+        description: >
+          Number of days between order purchase and delivery
+          to the customer.
+
+      - name: delivery_variance_days
+        description: >
+          Difference between estimated and actual delivery in days.
+          Positive values indicate late delivery and negative values
+          indicate early delivery.
+
+      - name: is_late_delivery
+        description: >
+          Indicates whether the actual delivery occurred after
+          the estimated delivery date.
+
+      - name: is_approval_timestamp_missing
+        description: >
+          Flag indicating if a delivered order has a missing approval timestamp.
+
+      - name: is_carrier_timestamp_missing
+        description: >
+          Flag indicating if a delivered order has a missing carrier
+          handover timestamp.
+
+      - name: is_customer_delivery_timestamp_missing
+        description: >
+          Flag indicating if a delivered order has a missing customer
+          delivery timestamp.
+
+  - name: int_olist__order_items_enriched
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+
+      - name: order_item_id
+        data_tests:
+          - not_null
+
+      - name: product_id
+        data_tests:
+          - not_null
+
+      - name: seller_id
+        data_tests:
+          - not_null
+
+      - name: product_category_name
+        description: >
+          English product category obtained from the category
+          translation lookup and approved translation overrides.
+
+      - name: price
+        data_tests:
+          - not_null
+
+      - name: shipping_cost
+        data_tests:
+          - not_null
+
+      - name: total_price
+        description: >
+          Total item amount calculated as item price plus shipping cost.
+
+  - name: int_olist__order_payments_enriched
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+
+      - name: payment_sequential
+        data_tests:
+          - not_null
+
+      - name: payment_type
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - credit_card
+                  - boleto
+                  - voucher
+                  - debit_card
+
+      - name: payment_value
+        data_tests:
+          - not_null
+
+  - name: int_olist__geolocation_enriched
+    columns:
+      - name: geolocation_zip_code_prefix
+        data_tests:
+          - unique
+          - not_null
+
+      - name: latitude
+        description: >
+          Representative latitude calculated as the median latitude
+          of geolocation records within each ZIP-code prefix.
+        data_tests:
+          - not_null
+
+      - name: longitude
+        description: >
+          Representative longitude calculated as the median longitude
+          of geolocation records within each ZIP-code prefix.
+        data_tests:
+          - not_null

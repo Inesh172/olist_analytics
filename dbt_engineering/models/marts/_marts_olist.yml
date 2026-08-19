@@ -1,0 +1,129 @@
+version: 2
+
+models:
+
+  - name: fct_olist__orders
+    columns:
+      - name: order_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: order_purchase_timestamp
+        data_tests:
+          - not_null 
+          
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_olist__customers')
+                field: customer_id
+
+
+  - name: fct_olist__order_items
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('fct_olist__orders')
+                field: order_id
+
+      - name: order_item_id
+        data_tests:
+          - not_null
+
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_olist__products')
+                field: product_id
+
+      - name: seller_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_olist__sellers')
+                field: seller_id
+
+
+  - name: fct_olist__order_payments
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('fct_olist__orders')
+                field: order_id
+
+      - name: payment_sequential
+        data_tests:
+          - not_null
+
+
+  - name: fct_olist__order_reviews
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - review_id
+              - order_id
+
+    columns:
+      - name: review_id
+        data_tests:
+          - not_null
+
+      - name: order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('fct_olist__orders')
+                field: order_id
+
+
+  - name: dim_olist__customers
+    description: >
+      Customer dimension containing one row per persistent customer,
+      using the customer's most recently recorded location.
+
+    columns:
+      - name: customer_id
+        description: Persistent identifier for a customer.
+        data_tests:
+          - unique
+          - not_null
+
+
+  - name: dim_olist__products
+    description: >
+      Product dimension containing one row per product and its
+      descriptive and physical attributes.
+
+    columns:
+      - name: product_id
+        description: Unique identifier for a product.
+        data_tests:
+          - unique
+          - not_null
+
+
+  - name: dim_olist__sellers
+    description: >
+      Seller dimension containing one row per seller and representative
+      location information.
+
+    columns:
+      - name: seller_id
+        description: Unique identifier for a seller.
+        data_tests:
+          - unique
+          - not_null
