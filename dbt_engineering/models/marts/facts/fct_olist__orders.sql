@@ -30,8 +30,6 @@ order_items_by_order as (
 
     select
         order_id,
-        round(sum(price), 2) as item_subtotal,
-        round(sum(shipping_cost), 2) as shipping_total,
         round(sum(total_price), 2) as order_total_amount
 
     from {{ ref('int_olist__order_items_enriched') }}
@@ -58,8 +56,6 @@ final as (
         o.*,
 
         cast(order_purchase_timestamp as date) as order_purchase_date,
-        coalesce(oi.item_subtotal, 0) as item_subtotal,
-        coalesce(oi.shipping_total, 0) as shipping_total,
         coalesce(oi.order_total_amount, 0) as order_total_amount,
         coalesce(p.total_payment_value, 0) as total_payment_value
 
