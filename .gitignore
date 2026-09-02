@@ -21,3 +21,7 @@ profiles.yml
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Power BI binary files are distributed through GitHub Releases
+*.pbix
+*.pbi
