@@ -1,3 +1,21 @@
+## Data Source
+
+This project uses the [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), published on Kaggle.
+
+The dataset contains approximately 100,000 anonymised e-commerce orders placed between 2016 and 2018. It includes information about customers, sellers, products, order items, payments, reviews, delivery timestamps, and customer and seller locations.
+
+The following source files were used:
+
+* `olist_customers_dataset.csv`
+* `olist_geolocation_dataset.csv`
+* `olist_order_items_dataset.csv`
+* `olist_order_payments_dataset.csv`
+* `olist_order_reviews_dataset.csv`
+* `olist_orders_dataset.csv`
+* `olist_products_dataset.csv`
+* `olist_sellers_dataset.csv`
+* `product_category_name_translation.csv`
+
 ## Power BI Dashboard
 
 The Power BI report translates the transformed Olist data into three
