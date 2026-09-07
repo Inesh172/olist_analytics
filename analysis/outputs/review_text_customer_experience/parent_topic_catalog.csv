@@ -1,0 +1,45 @@
+topic_id,document_count,keywords_pt,prevalence_pct,topic_label_en,topic_family_en
+-1,11282,-1_produto_recomendo_entrega_prazo,26.520921485660555,Other / unassigned,Other / unassigned
+0,12447,0_recebi_comprei_produto_veio,29.259520451339917,"Mixed order, receipt and fulfilment experience",Mixed order and fulfilment experience
+1,2599,1_prazo_chegou prazo_chegou_entrega prazo,6.1095439586271745,Delivered within or before expected timeframe,Delivery timing
+2,2023,2_qualidade_produto_recomendo_excelente,4.755524212505876,Positive product quality and recommendation,Product experience
+3,1392,3_chegou prazo_produto chegou_chegou_prazo,3.272214386459803,Product arrived before expected timeframe,Delivery timing
+4,1228,4_loja_recomendo loja_lannister_comprar,2.8866948754113775,Positive store experience and recommendation,"Store, seller and service experience"
+5,1128,5_entregue prazo_prazo produto_prazo_produto entregue,2.6516220028208743,On-time delivery and product quality,Delivery timing
+6,941,6_rpida_entrega rpida_rpida produto_rpido,2.2120357310766336,Fast delivery,Delivery timing
+7,908,7_recebi_produto_prazo_entregue,2.134461683121768,Order received as expected,Delivery timing
+8,835,8_certo_combinado_conforme combinado_conforme,1.9628584861307006,Everything correct or as agreed,Generic positive or confirmation
+9,641,9_gostei_adorei_lindo_amei,1.5068171133051245,Product appearance and satisfaction,Product experience
+10,504,10_rpido_rpida_entrega rpida_rapido,1.1847672778561353,Very fast delivery,Delivery timing
+11,430,11_relgio_lindo_bonito_casio,1.0108133521391631,Watch product feedback,Product-specific feedback
+12,380,12_luminrias_valeu_entrega_,0.8932769158439116,Lighting product feedback,Product-specific feedback
+13,378,13_cor_veio cor_azul_produto cor,0.8885754583921015,Wrong product colour,Product experience
+14,373,14_recomendo_recomendo super_super recomendo_recomendo recomendo,0.8768218147625764,Strong recommendation,Generic positive or confirmation
+15,308,15_testei_usei_testar_instalei,0.7240244475787494,Product not yet tested,Product experience
+16,268,16_parabns_esto parabns_esto_parabns atendimento,0.6299952985425482,Positive service or company feedback,"Store, seller and service experience"
+17,268,17_exelente_parabens_ruim_blz,0.6299952985425482,Short generic evaluation,Generic positive or confirmation
+18,261,18_amei_excelente_produto ok_ok,0.613540197461213,Positive product feedback,Product experience
+19,253,19_produto recebi_otima_recebi produto_produto otima,0.5947343676539727,Positive product receipt feedback,Product experience
+20,244,20_compra_comprar_satisfeita compra_recomendo compra,0.5735778091208275,Positive purchase experience,"Store, seller and service experience"
+21,219,21_valeu___,0.5148095909732018,Generic thanks or low-information feedback,Generic positive or confirmation
+22,215,22_atendimento_servio_excelente atendimento_timo atendimento,0.5054066760695816,Positive customer service,"Store, seller and service experience"
+23,214,23_recomendo recomendo_recomendo_otimo recomendo_recomendo otimo,0.5030559473436765,Generic recommendation,Generic positive or confirmation
+24,206,24_timo timo_timo_timo otimo_otimo timo,0.48425011753643626,Generic excellent feedback,Generic positive or confirmation
+25,200,25_avaliar_recebi_at recebi_opinar,0.47014574518100605,Unable to evaluate because product not received,Mixed order and fulfilment experience
+26,195,26_custo_benefcio_custo benefcio_preo,0.4583921015514809,Good value for money,Product experience
+27,192,27_rpida_entrega super_entrega_rpida entrega,0.45133991537376583,Fast delivery,Delivery timing
+28,171,28_excelente excelente_excelente_otima_,0.40197461212976027,Generic excellent feedback,Generic positive or confirmation
+29,167,29_cortina_cortinas_linda_recebi cortina,0.3925716972261401,Curtain product feedback,Product-specific feedback
+30,160,30_cadeira_cadeiras_montar_comprei,0.37611659614480486,Chair condition and assembly feedback,Product-specific feedback
+31,155,31_vendedor_timo vendedor_vendedor recomendo_excelente vendedor,0.3643629525152797,Positive seller feedback,"Store, seller and service experience"
+32,144,32_timo_timo timo_maravilhoso_timo excelente,0.33850493653032443,Generic great feedback,Generic positive or confirmation
+33,132,33_otimo otimo_otimo_ok_,0.31029619181946405,Customer satisfaction,Generic positive or confirmation
+34,130,34_10_nota 10_nota_10 timo,0.305594734367654,Rating of 10 out of 10,Generic positive or confirmation
+35,127,35_ok super_recomendo ok_recomendo super_super recomendo,0.29854254818993886,Generic recommendation,Generic positive or confirmation
+36,126,36____,0.29619181946403383,Low-information or symbol-only feedback,Other / unassigned
+37,126,37_recomendo recomendo_recomendo_normal_,0.29619181946403383,Generic recommendation,Generic positive or confirmation
+38,124,38_expectativas_atendeu_atendeu expectativas_superou,0.2914903620122238,Product met expectations,Product experience
+39,121,39_site_comprar site_seguro_site super,0.2844381758345087,Positive website experience,"Store, seller and service experience"
+40,112,40_empresa_cliente_clientes_parabns,0.26328161730136346,Positive company or customer-service feedback,"Store, seller and service experience"
+41,110,41_otimo otimo_otimo__,0.25858015984955335,Rating of 10 out of 10,Generic positive or confirmation
+42,103,42_10_10 otimo_otimo_ok recebido,0.24212505876821813,Rating of 10 out of 10 and order received,Generic positive or confirmation

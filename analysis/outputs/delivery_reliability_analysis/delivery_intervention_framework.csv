@@ -1,0 +1,4 @@
+control,trigger,action,owner,primary_kpi
+Seller deadline alert,No handover 24 hours before the earliest shipping deadline,Automated reminder; escalate unresolved orders six hours before deadline,Seller operations,Missed-handover rate
+In-transit route monitoring,Elapsed transit time exceeds the route-specific expected milestone,Logistics escalation and proactive customer update,Logistics operations,Late-delivery rate
+Delivery confirmation integrity,Order marked delivered on a high-discrepancy seller or route,Stronger proof of delivery and rapid non-receipt resolution,Logistics and customer support,Post-delivery non-receipt report rate

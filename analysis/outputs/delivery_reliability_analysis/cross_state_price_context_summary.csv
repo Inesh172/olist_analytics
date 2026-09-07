@@ -1,0 +1,6 @@
+purchase_context,order_items,orders,item_value,item_share_pct
+No historical local sale observed,69076,60821,8930613.19,98.21558061167906
+No same-month local sale observed,1046,922,133423.92,1.4872531316204802
+Cross-state price at least 5% lower,47,45,5545.610000000001,0.06682686155464873
+Similar observed price,134,120,14532.68,0.1905276478366581
+Local median price at least 5% lower,28,28,3078.04,0.039811747309152434

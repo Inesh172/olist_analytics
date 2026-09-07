@@ -1,0 +1,30 @@
+parent_topic_family,subtopic_label_en,order_count,share_within_family_pct
+Delivery timing,Delivered on or before expected date,5122,66.83194154488518
+Delivery timing,Fast delivery with positive feedback,1498,19.545929018789142
+Delivery timing,Product receipt or mixed delivery feedback,910,11.873695198329854
+Delivery timing,Other / unassigned within family,134,1.7484342379958244
+Mixed order and fulfilment experience,Other / unassigned within family,6610,52.26535937376453
+Mixed order and fulfilment experience,Non-receipt reported at review time,970,7.669803115363328
+Mixed order and fulfilment experience,"Wrong, incompatible or mismatched product",904,7.147940222977782
+Mixed order and fulfilment experience,Late or slow delivery,780,6.167470546374634
+Mixed order and fulfilment experience,"Product quality, defect or damage",770,6.088400411164703
+Mixed order and fulfilment experience,Incomplete order or missing item,660,5.2186289238554595
+Mixed order and fulfilment experience,"Cancellation, refund or payment issue",571,4.514904720487072
+Mixed order and fulfilment experience,Seller/store service or communication,566,4.475369652882106
+Mixed order and fulfilment experience,Postal delivery or collection issue,306,2.419546137423895
+Mixed order and fulfilment experience,Delivery timing with mixed sentiment,182,1.439076460820748
+Mixed order and fulfilment experience,Positive or mixed product feedback,138,1.0911678658970507
+Mixed order and fulfilment experience,Not yet evaluated or uncertain receipt,102,0.8065153791412984
+Mixed order and fulfilment experience,Tax invoice or documentation issue,88,0.6958171898473946
+Product experience,Positive product quality and recommendation,2018,48.24288787951232
+Product experience,Wrong product colour,377,9.012670332297395
+Product experience,Liked or loved the product,373,8.917045182883099
+Product experience,Product not yet tested,306,7.3153239301936415
+Product experience,Everything correct or recommended,259,6.191728424575663
+Product experience,Good value for money,191,4.566100884532632
+Product experience,Generic or low-information feedback,169,4.040162562754005
+Product experience,Positive product appearance,158,3.7771934018646904
+Product experience,Product met expectations,124,2.9643796318431748
+Product experience,Product received correctly or mixed feedback,99,2.366722448003825
+Product experience,Non-receipt reported at review time,66,1.5778149653358835
+Product experience,Other / unassigned within family,43,1.0279703562036815
